@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark bg-primary mb-4">
+	<div class="container">
+		<a class="navbar-brand" href="/">Pollster</a>
+		<li class="nav-item text-white">
+     {% if request.user.is_authenticated %}
+        <a style="color:white;" href="{% url 'logout' %}">Logout</a>
+     {% else %}
+        <a style="color:white;" href="{% url 'polls:index' %}">Login</a>
+     {% endif %}
+ </li>
+	</div>
+</nav>
